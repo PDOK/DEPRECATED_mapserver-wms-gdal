@@ -62,7 +62,7 @@ FROM pdok/mapserver-wms-gdal
 
 COPY /etc/example.map /srv/data/example.map
 ```
-Running the example above will create a service on the url: http:/localhost/example/wms? An working example can be found: https://github.com/PDOK/mapserver/tree/natura2000-example
+Running the example above will create a service on the url: http:/localhost/example/wms?
 
 ## Misc
 ### Why NGINX
