@@ -7,7 +7,7 @@ ENV TZ Europe/Amsterdam
 RUN apt-get update && \
         apt-get install -y --no-install-recommends \
         ca-certificates \
-        gettext \	
+        gettext \
         bzip2 \
         cmake \
         g++ \
@@ -40,7 +40,7 @@ RUN apt-get update && \
         libgif-dev \
         libjpeg-dev \
         libpq-dev \
-        librsvg2-dev \      
+        librsvg2-dev \
         libpng-dev \
         libfreetype6-dev \
         libjpeg-dev \
@@ -52,7 +52,7 @@ RUN apt-get update && \
         libxslt1-dev && \
         rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/mapserver/mapserver/ /usr/local/src/mapserver
+RUN git clone --single-branch -b branch-7-2 https://github.com/mapserver/mapserver/ /usr/local/src/mapserver
 
 RUN mkdir /usr/local/src/mapserver/build && \
         cd /usr/local/src/mapserver/build && \
@@ -69,7 +69,7 @@ RUN mkdir /usr/local/src/mapserver/build && \
         -DWITH_RSVG=OFF \
         -DWITH_MYSQL=OFF \
         -DWITH_FCGI=ON \
-		-DWITH_GEOS=ON \
+        -DWITH_GEOS=ON \
         -DWITH_POSTGIS=OFF \
         -DWITH_GDAL=ON \
         -DWITH_OGR=OFF \
@@ -100,6 +100,7 @@ RUN mkdir /usr/local/src/mapserver/build && \
         -DWITH_APACHE_MODULE=OFF \
         -DWITH_GENERIC_NINT=OFF \
         -DWITH_USE_POINT_Z_M=ON \
+        -DWITH_PROTOBUFC=OFF \
         -DCMAKE_PREFIX_PATH=/opt/gdal && \
         make && \
         make install && \
@@ -116,8 +117,8 @@ COPY --from=0 /usr/local/lib /usr/local/lib
 
 RUN apt-get update && \
         apt-get install -y --no-install-recommends \
-        fonts-liberation2 \	
-        libcairo2-dev \		
+        fonts-liberation2 \
+        libcairo2-dev \
         libcurl4-gnutls-dev \
         libfribidi-dev \
         libgif-dev \
