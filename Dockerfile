@@ -133,7 +133,8 @@ RUN apt-get update && \
         libgdal-dev \
         libgeos-dev \
         libproj-dev \
-        libxslt1-dev && \
+        libxslt1-dev \
+		wget && \
         rm -rf /var/lib/apt/lists/*
 
 COPY etc/epsg /usr/share/proj
