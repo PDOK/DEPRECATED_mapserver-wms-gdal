@@ -134,7 +134,8 @@ RUN apt-get update && \
         libgeos-dev \
         libproj-dev \
         libxslt1-dev \
-		wget && \
+        wget \
+        gnupg && \
         rm -rf /var/lib/apt/lists/*
 
 COPY etc/epsg /usr/share/proj
