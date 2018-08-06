@@ -72,7 +72,7 @@ RUN mkdir /usr/local/src/mapserver/build && \
         -DWITH_GEOS=ON \
         -DWITH_POSTGIS=OFF \
         -DWITH_GDAL=ON \
-        -DWITH_OGR=OFF \
+        -DWITH_OGR=ON \
         -DWITH_CURL=OFF \
         -DWITH_CLIENT_WMS=OFF \
         -DWITH_CLIENT_WFS=OFF \
