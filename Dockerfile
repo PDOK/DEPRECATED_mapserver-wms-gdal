@@ -149,7 +149,7 @@ RUN apt-get update && \
         apt-get install -y --no-install-recommends \
         nginx \
         supervisor \
-        spawn-fcgi && \
+        uwsgi && \
         rm -rf /var/lib/apt/lists/*
 
 RUN apt-get clean
