@@ -23,7 +23,7 @@ Regarding the second need, finding a usable Mapserver Docker image is a challeng
 
 ## What will it do
 
-It will create an Mapserver application run with a modern web application NGINX in which the map=.. QUERY_STRING issue is fixed. The application is configured for service raster files (GeoTIFF)
+It will create an WMS-only Mapserver application run with a lightweight web application Lighttpd in which the map=.. QUERY_STRING issue is fixed. The application is configured for service raster files (GeoTIFF)
 
 ## Components
 
@@ -35,7 +35,7 @@ This stack is composed of the following:
 
 ### Mapserver
 
-Mapserver is the platform that will provide the WCS services based on a raster datasource.
+Mapserver is the platform that will provide the WMS services based on a raster datasource.
 
 ### GDAL
 
