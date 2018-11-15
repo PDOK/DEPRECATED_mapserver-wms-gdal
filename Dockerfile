@@ -118,12 +118,14 @@ COPY --from=0 /usr/local/lib /usr/local/lib
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         libpng16-16  \
+        python-cairo \
         libfreetype6 \
         libjpeg62-turbo \
         libfcgi0ldbl \
+        libfribidi0 \
         libgdal20 \
         libgeos-c1v5 \
-        libpq5 \
+        libglib2.0-0 \
         libproj12 \
         libxml2 \
         libxslt1.1 \
