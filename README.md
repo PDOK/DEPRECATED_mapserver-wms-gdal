@@ -1,4 +1,7 @@
 # DEPRECATED
+
+Please use https://github.com/PDOK/mapserver-docker
+
 # Mapserver WMS GDAL
 
 ## TL;DR
